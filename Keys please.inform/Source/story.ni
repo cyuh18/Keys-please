@@ -21,3 +21,22 @@ Lions Den is a room. Lions Den is west of Pride Rock.
 The collar is a thing in the bathroom. The collar is undescribed.
 
 The rope is a thing in the Monkey Cages. The rope is undescribed.
+
+Leash is a thing. The description is "big enough to fit around the king of the jungle"
+
+Combining it with is an action applying to two things.
+Understand "combine [something] with [something]" as combining it with.
+
+Instead of combining rope with collar:
+say "You combine the rope and collar to make a leash.";
+remove rope from play;
+remove collar from play;
+move the leash to player.
+
+
+Instead of combining collar with rope:
+say "You combine the rope and collar to make a leash.";
+remove rope from play;
+remove collar from play;
+move the leash to player.
+
