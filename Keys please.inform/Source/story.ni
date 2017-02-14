@@ -17,3 +17,7 @@ Monkey Cages is a room. Monkey Cages is south of Safari Zone.
 Pride Rock is a room. Pride Rock is west of Safari Zone.
 
 Lions Den is a room. Lions Den is west of Pride Rock.
+
+The collar is a thing in the bathroom. The collar is undescribed.
+
+The rope is a thing in the Monkey Cages. The rope is undescribed.
