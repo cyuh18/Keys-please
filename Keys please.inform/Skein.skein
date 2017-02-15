@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1002">
+<Skein rootNode="node-1288">
     <generator>Inform Mac Client (Inform version 1.64/6.33/6M62)</generator>
-    <item nodeId="node-1002">
+    <item nodeId="node-1288">
         <command xml:space="preserve">Keys please</command>
         <result xml:space="preserve">
 
@@ -15,215 +15,215 @@ Main Plaza
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1025"></child>
-            <child nodeId="node-1003"></child>
+        <children><child nodeId="node-1311"></child>
+            <child nodeId="node-1289"></child>
         </children>
     </item>
-    <item nodeId="node-1003">
+    <item nodeId="node-1289">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Bathroom
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1021"></child>
-            <child nodeId="node-1004"></child>
+        <children><child nodeId="node-1307"></child>
+            <child nodeId="node-1290"></child>
         </children>
     </item>
-    <item nodeId="node-1004">
+    <item nodeId="node-1290">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1005"></child>
+        <children><child nodeId="node-1291"></child>
         </children>
     </item>
-    <item nodeId="node-1005">
+    <item nodeId="node-1291">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Main Plaza
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1006"></child>
+        <children><child nodeId="node-1292"></child>
         </children>
     </item>
-    <item nodeId="node-1006">
+    <item nodeId="node-1292">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1007"></child>
+        <children><child nodeId="node-1293"></child>
         </children>
     </item>
-    <item nodeId="node-1007">
+    <item nodeId="node-1293">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Aquatic Center
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
+        <children><child nodeId="node-1294"></child>
         </children>
     </item>
-    <item nodeId="node-1008">
+    <item nodeId="node-1294">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Dolphin Pool
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1009"></child>
+        <children><child nodeId="node-1295"></child>
         </children>
     </item>
-    <item nodeId="node-1009">
+    <item nodeId="node-1295">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Bottom of Pool
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1010"></child>
+        <children><child nodeId="node-1296"></child>
         </children>
     </item>
-    <item nodeId="node-1010">
+    <item nodeId="node-1296">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Dolphin Pool
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1011"></child>
+        <children><child nodeId="node-1297"></child>
         </children>
     </item>
-    <item nodeId="node-1011">
+    <item nodeId="node-1297">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1012"></child>
+        <children><child nodeId="node-1298"></child>
         </children>
     </item>
-    <item nodeId="node-1012">
+    <item nodeId="node-1298">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Aquatic Center
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1013"></child>
+        <children><child nodeId="node-1299"></child>
         </children>
     </item>
-    <item nodeId="node-1013">
+    <item nodeId="node-1299">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Main Plaza
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1014"></child>
+        <children><child nodeId="node-1300"></child>
         </children>
     </item>
-    <item nodeId="node-1014">
+    <item nodeId="node-1300">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Safari Zone
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1015"></child>
+        <children><child nodeId="node-1301"></child>
         </children>
     </item>
-    <item nodeId="node-1015">
+    <item nodeId="node-1301">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1016"></child>
+        <children><child nodeId="node-1302"></child>
         </children>
     </item>
-    <item nodeId="node-1016">
+    <item nodeId="node-1302">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Monkey Cages
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1017"></child>
+        <children><child nodeId="node-1303"></child>
         </children>
     </item>
-    <item nodeId="node-1017">
+    <item nodeId="node-1303">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Safari Zone
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1018"></child>
+        <children><child nodeId="node-1304"></child>
         </children>
     </item>
-    <item nodeId="node-1018">
+    <item nodeId="node-1304">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Pride Rock
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1019"></child>
+        <children><child nodeId="node-1305"></child>
         </children>
     </item>
-    <item nodeId="node-1019">
+    <item nodeId="node-1305">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Lions Den
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1020"></child>
+        <children><child nodeId="node-1306"></child>
         </children>
     </item>
-    <item nodeId="node-1020">
+    <item nodeId="node-1306">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1021">
+    <item nodeId="node-1307">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Main Plaza
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1022"></child>
+        <children><child nodeId="node-1308"></child>
         </children>
     </item>
-    <item nodeId="node-1022">
+    <item nodeId="node-1308">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Aquatic Center
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1023"></child>
+        <children><child nodeId="node-1309"></child>
         </children>
     </item>
-    <item nodeId="node-1023">
+    <item nodeId="node-1309">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Dolphin Pool
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1024"></child>
+        <children><child nodeId="node-1310"></child>
         </children>
     </item>
-    <item nodeId="node-1024">
+    <item nodeId="node-1310">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Bottom of Pool
@@ -231,16 +231,16 @@ Bottom of Pool
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1025">
+    <item nodeId="node-1311">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1026"></child>
+        <children><child nodeId="node-1312"></child>
         </children>
     </item>
-    <item nodeId="node-1026">
+    <item nodeId="node-1312">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
