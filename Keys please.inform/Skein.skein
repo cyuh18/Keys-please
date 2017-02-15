@@ -16,6 +16,8 @@ Main Plaza
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1311"></child>
+            <child nodeId="node-1315"></child>
+            <child nodeId="node-1329"></child>
             <child nodeId="node-1289"></child>
         </children>
     </item>
@@ -23,10 +25,14 @@ Main Plaza
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Bathroom
+A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard.
+
+You can see a trashcan (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1307"></child>
+            <child nodeId="node-1615"></child>
             <child nodeId="node-1290"></child>
         </children>
     </item>
@@ -193,6 +199,127 @@ Lions Den
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1615">
+        <command xml:space="preserve">open trashcan</command>
+        <result xml:space="preserve">You open the trashcan, revealing Apple.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1616"></child>
+        </children>
+    </item>
+    <item nodeId="node-1616">
+        <command xml:space="preserve">take apple</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1617"></child>
+        </children>
+    </item>
+    <item nodeId="node-1617">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Plaza
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1618"></child>
+        </children>
+    </item>
+    <item nodeId="node-1618">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1619"></child>
+        </children>
+    </item>
+    <item nodeId="node-1619">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+You can see a monkey here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1620"></child>
+        </children>
+    </item>
+    <item nodeId="node-1620">
+        <command xml:space="preserve">x monkey</command>
+        <result xml:space="preserve">a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1621"></child>
+        </children>
+    </item>
+    <item nodeId="node-1621">
+        <command xml:space="preserve">take rope</command>
+        <result xml:space="preserve">The monkey holds on to the rope. Maybe he's hungry?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1622"></child>
+        </children>
+    </item>
+    <item nodeId="node-1622">
+        <command xml:space="preserve">hold apple</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1623"></child>
+        </children>
+    </item>
+    <item nodeId="node-1623">
+        <command xml:space="preserve">take roope</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1624"></child>
+        </children>
+    </item>
+    <item nodeId="node-1624">
+        <command xml:space="preserve">take rope</command>
+        <result xml:space="preserve">The monkey holds on to the rope. Maybe he's hungry?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1625"></child>
+        </children>
+    </item>
+    <item nodeId="node-1625">
+        <command xml:space="preserve">give monkey apple</command>
+        <result xml:space="preserve">The monkey doesn't seem interested.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1626"></child>
+        </children>
+    </item>
+    <item nodeId="node-1626">
+        <command xml:space="preserve">give monkey apple</command>
+        <result xml:space="preserve">The monkey doesn't seem interested.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1627"></child>
+        </children>
+    </item>
+    <item nodeId="node-1627">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Apple
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1307">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
@@ -227,6 +354,185 @@ Dolphin Pool
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Bottom of Pool
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1329">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1330"></child>
+        </children>
+    </item>
+    <item nodeId="node-1330">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+You can see a monkey here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1331"></child>
+        </children>
+    </item>
+    <item nodeId="node-1331">
+        <command xml:space="preserve">x monkey</command>
+        <result xml:space="preserve">a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1332"></child>
+        </children>
+    </item>
+    <item nodeId="node-1332">
+        <command xml:space="preserve">take rope</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1315">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1316"></child>
+        </children>
+    </item>
+    <item nodeId="node-1316">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bathroom
+A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1317"></child>
+        </children>
+    </item>
+    <item nodeId="node-1317">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Plaza
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1318"></child>
+        </children>
+    </item>
+    <item nodeId="node-1318">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Aquatic Center
+A center with many different exibits around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1319"></child>
+        </children>
+    </item>
+    <item nodeId="node-1319">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Dolphin Pool
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1320"></child>
+        </children>
+    </item>
+    <item nodeId="node-1320">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of Pool
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1321"></child>
+        </children>
+    </item>
+    <item nodeId="node-1321">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1322"></child>
+        </children>
+    </item>
+    <item nodeId="node-1322">
+        <command xml:space="preserve">t</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1323"></child>
+        </children>
+    </item>
+    <item nodeId="node-1323">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Dolphin Pool
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1324"></child>
+        </children>
+    </item>
+    <item nodeId="node-1324">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Aquatic Center
+A center with many different exibits around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1325"></child>
+        </children>
+    </item>
+    <item nodeId="node-1325">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Plaza
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1326"></child>
+        </children>
+    </item>
+    <item nodeId="node-1326">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1327"></child>
+        </children>
+    </item>
+    <item nodeId="node-1327">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1328"></child>
+        </children>
+    </item>
+    <item nodeId="node-1328">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Monkey Cages
+a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.
+
+You can see a monkeyy here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
