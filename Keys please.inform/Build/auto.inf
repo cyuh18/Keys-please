@@ -11138,7 +11138,6 @@ Object -> -> I136_collar ""
     class K2_thing
     with short_name BC_175
     with description BC_176
-    has concealed
     with vector 0
     has mark_as_thing
     with IK2_Count 3
@@ -49152,7 +49151,7 @@ Verb 'combine'
 Constant TX_PS_64 = ">";
 Constant TX_PS_50 = "A center with many different exibits around it. There is a sign in the middle of the opening.";
 Constant TX_PS_36 = "A opening with many different animal cages around it. There is a sign in the middle of the opening.";
-Constant TX_PS_40 = "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard.";
+Constant TX_PS_40 = "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_55 = "Ape Cage";
 Constant TX_PS_47 = "Apple";

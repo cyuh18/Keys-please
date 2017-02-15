@@ -25,16 +25,59 @@ Main Plaza
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Bathroom
-A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard.
-
-You can see a trashcan (closed) here.
+A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1307"></child>
+            <child nodeId="node-1635"></child>
             <child nodeId="node-1615"></child>
             <child nodeId="node-1290"></child>
+            <child nodeId="node-1629"></child>
         </children>
+    </item>
+    <item nodeId="node-1629">
+        <command xml:space="preserve">x cubboard</command>
+        <result xml:space="preserve">a wooden cubboard, there may be something inside
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1630"></child>
+        </children>
+    </item>
+    <item nodeId="node-1630">
+        <command xml:space="preserve">open cubborad</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1631"></child>
+        </children>
+    </item>
+    <item nodeId="node-1631">
+        <command xml:space="preserve">open cubboard</command>
+        <result xml:space="preserve">You open the cubboard, revealing nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1632"></child>
+        </children>
+    </item>
+    <item nodeId="node-1632">
+        <command xml:space="preserve">take collar</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1633"></child>
+        </children>
+    </item>
+    <item nodeId="node-1633">
+        <command xml:space="preserve"> open trashcan</command>
+        <result xml:space="preserve">You open the trashcan, revealing Apple.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1290">
         <command xml:space="preserve">w</command>
@@ -316,6 +359,250 @@ You can see a monkey here.
         <command xml:space="preserve">i</command>
         <result xml:space="preserve">You are carrying:
   Apple
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1635">
+        <command xml:space="preserve">open cubboard</command>
+        <result xml:space="preserve">You open the cubboard, revealing a collar.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1636"></child>
+        </children>
+    </item>
+    <item nodeId="node-1636">
+        <command xml:space="preserve">take collar</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1637"></child>
+        </children>
+    </item>
+    <item nodeId="node-1637">
+        <command xml:space="preserve">xcollar</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1638"></child>
+        </children>
+    </item>
+    <item nodeId="node-1638">
+        <command xml:space="preserve">x collar</command>
+        <result xml:space="preserve">a big black collar with spikes on the outside. its so big you can fit it around barney the dinosaur!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1639"></child>
+        </children>
+    </item>
+    <item nodeId="node-1639">
+        <command xml:space="preserve">open trashcan</command>
+        <result xml:space="preserve">You open the trashcan, revealing Apple.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1640"></child>
+        </children>
+    </item>
+    <item nodeId="node-1640">
+        <command xml:space="preserve">take apple</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1641"></child>
+        </children>
+    </item>
+    <item nodeId="node-1641">
+        <command xml:space="preserve">x apple</command>
+        <result xml:space="preserve">a half eaten apple
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1642"></child>
+        </children>
+    </item>
+    <item nodeId="node-1642">
+        <command xml:space="preserve">x trashcan</command>
+        <result xml:space="preserve">a groddy trashcan
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1643"></child>
+        </children>
+    </item>
+    <item nodeId="node-1643">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1644"></child>
+        </children>
+    </item>
+    <item nodeId="node-1644">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1645"></child>
+        </children>
+    </item>
+    <item nodeId="node-1645">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1646"></child>
+        </children>
+    </item>
+    <item nodeId="node-1646">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Plaza
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1647"></child>
+        </children>
+    </item>
+    <item nodeId="node-1647">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1648"></child>
+        </children>
+    </item>
+    <item nodeId="node-1648">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+You can see a monkey here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1649"></child>
+        </children>
+    </item>
+    <item nodeId="node-1649">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1650"></child>
+        </children>
+    </item>
+    <item nodeId="node-1650">
+        <command xml:space="preserve">x sign</command>
+        <result xml:space="preserve">Zone for the most land epic animals of the world. Aquatic zone cannot hang.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1651"></child>
+        </children>
+    </item>
+    <item nodeId="node-1651">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Pride Rock
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1652"></child>
+        </children>
+    </item>
+    <item nodeId="node-1652">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1653"></child>
+        </children>
+    </item>
+    <item nodeId="node-1653">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1654"></child>
+        </children>
+    </item>
+    <item nodeId="node-1654">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+You can see a monkey here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1655"></child>
+        </children>
+    </item>
+    <item nodeId="node-1655">
+        <command xml:space="preserve">x monkey</command>
+        <result xml:space="preserve">a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1656"></child>
+        </children>
+    </item>
+    <item nodeId="node-1656">
+        <command xml:space="preserve">take rope</command>
+        <result xml:space="preserve">The monkey holds on to the rope. Maybe he's hungry?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1657"></child>
+        </children>
+    </item>
+    <item nodeId="node-1657">
+        <command xml:space="preserve">give apple to monkey</command>
+        <result xml:space="preserve">The monkey doesn't seem interested.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1658"></child>
+        </children>
+    </item>
+    <item nodeId="node-1658">
+        <command xml:space="preserve">trade apple</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1659"></child>
+        </children>
+    </item>
+    <item nodeId="node-1659">
+        <command xml:space="preserve">tke rope</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1660"></child>
+        </children>
+    </item>
+    <item nodeId="node-1660">
+        <command xml:space="preserve">take rope</command>
+        <result xml:space="preserve">The monkey holds on to the rope. Maybe he's hungry?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
