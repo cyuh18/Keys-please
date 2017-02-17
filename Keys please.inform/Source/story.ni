@@ -18,9 +18,19 @@ The aquatic sign is scenery in the aquatic center. The description is "Zone for 
 
 The mirror is scenery in the bathroom. The description is "an ugly man melts out of the mirror causing you to panic...when suddenly you realize it is you."
 
-Dolphin Pool is a room. Dolphin Pool is east of Aquatic Center.
+Dolphin enclosure is a room. Dolphin enclosure is east of Aquatic Center."You are on the balcony of the dolphin enclosure. the water looks very nice and calm."
 
-Bottom of Pool is a room. Bottom of Pool is below Dolphin Pool. The description is " 'blub blub' the water is very chilly down here 'blub blub' you can spot a treasure chest next to 'blub blub' some coral on the ground."
+Instead of player entering pool:
+	if player is wearing scuba tank:
+		say "you jump into the water.";
+		 move player to pool;
+	Otherwise: 
+		say "you can't enter without air!"
+
+
+Pool is a room. Pool is below dolphin enclosure. the description is "the water feels very warm up here, you see some fish down below."
+
+Bottom of Pool is a room. Bottom of Pool is below Pool. The description is " 'blub blub' the water is very chilly down here 'blub blub' you can see a fish next to 'blub blub' some coral on the ground."
 
 coral is scenery in the Bottom of Pool. The description is "some beautiful orange coral in the water."
 
@@ -28,9 +38,11 @@ Ape Cage is a room. Ape Cage is south of Safari Zone. The description is "a cage
 
 The Alpha is a male animal. The Alpha is in the Ape Cage. the Alpha is undescribed. The description of the alpha is " a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him..."
 
-Lions cage is a room. Lions cage is west of Safari Zone.
+Lions cage is a room. Lions cage is west of Safari Zone. "The cage for the king of the jungle. You see a scuba tank inside the enclosure."
 
-Pride Rock is a room. Pride Rock is west of Lions cage.
+Pride Rock is a room. Pride Rock is west of Lions cage. "The rock where the lions hang out. A big lion is eyeing you 30 ft away. "
+
+The scuba tank is a thing inside Pride Rock. The scuba tank is wearable. The scuba tank is undescribed. The description of the scuba tank is "a tank full of air that will help propel you into the deep."
 
 The collar is a thing. The collar is in the cubboard. The description of the collar is "a big black collar with spikes on the outside. its so big you can fit it around barney the dinosaur!"
 
