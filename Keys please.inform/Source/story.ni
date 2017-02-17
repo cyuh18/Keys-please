@@ -20,9 +20,13 @@ The mirror is scenery in the bathroom. The description is "an ugly man melts out
 
 Dolphin Pool is a room. Dolphin Pool is east of Aquatic Center.
 
-Bottom of Pool is a room. Bottom of Pool is below Dolphin Pool.
+Bottom of Pool is a room. Bottom of Pool is below Dolphin Pool. The description is " 'blub blub' the water is very chilly down here 'blub blub' you can spot a treasure chest next to 'blub blub' some coral on the ground."
 
-Ape Cage is a room. Ape Cage is south of Safari Zone.
+coral is scenery in the Bottom of Pool. The description is "some beautiful orange coral in the water."
+
+Ape Cage is a room. Ape Cage is south of Safari Zone. The description is "a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!"
+
+The Alpha is a male animal. The Alpha is in the Ape Cage. the Alpha is undescribed. The description of the alpha is " a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him..."
 
 Lions cage is a room. Lions cage is west of Safari Zone.
 
@@ -34,7 +38,7 @@ The cubboard is a container in the bathroom. It is a closed openable container. 
 
 The rope is a thing in the Ape Cage. The rope is undescribed. The description of the rope is "a blue nylon rope that smells like monkey"
 		
-The monkey is a male animal. The monkey is in the Ape Cage. The description of a monkey is "a scumbag little monkey that is laughing at you. He seems to have a rope in his hands."
+The monkey is a male animal. The monkey is in the Ape Cage. The monkey is undescribed. The description of a monkey is "a scumbag little monkey that is laughing at you. He seems to have a rope in his hands."
 
 The trashcan is a container in the bathroom. It is a closed openable container. The trashcan is undescribed. The description is "a groddy trashcan"
 

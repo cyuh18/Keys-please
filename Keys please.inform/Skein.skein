@@ -1032,7 +1032,7 @@ Bottom of Pool
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Safari Zone
-A opening with many different animal cages around it. There is a sign in the middle of the opening.
+A opening with many different animal cages around it. There is a sign in the middle of the opening
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1043,11 +1043,14 @@ A opening with many different animal cages around it. There is a sign in the mid
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Ape Cage
-You can see a monkey here.
+a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1093"></child>
+            <child nodeId="node-1175"></child>
+            <child nodeId="node-1185"></child>
+            <child nodeId="node-1180"></child>
             <child nodeId="node-1071"></child>
         </children>
     </item>
@@ -1063,6 +1066,69 @@ You can see a monkey here.
     <item nodeId="node-1072">
         <command xml:space="preserve">take rope</command>
         <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1180">
+        <command xml:space="preserve">x little monkey</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1181"></child>
+        </children>
+    </item>
+    <item nodeId="node-1181">
+        <command xml:space="preserve">x monkey</command>
+        <result xml:space="preserve">a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1182"></child>
+        </children>
+    </item>
+    <item nodeId="node-1182">
+        <command xml:space="preserve">x alpha</command>
+        <result xml:space="preserve">You see nothing special about the Alpha.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1185">
+        <command xml:space="preserve">x alpha</command>
+        <result xml:space="preserve"> a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse, claws as sharp as knives. Only a king can rival him...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1175">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1176"></child>
+        </children>
+    </item>
+    <item nodeId="node-1176">
+        <command xml:space="preserve">x sign</command>
+        <result xml:space="preserve">Zone for the most land epic animals of the world. Aquatic zone cannot hang.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1177"></child>
+        </children>
+    </item>
+    <item nodeId="node-1177">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!
+
+You can see an Alpha and a monkey here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
