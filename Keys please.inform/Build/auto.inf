@@ -43,7 +43,7 @@ Global Story = BC_0;
 Constant Headline BC_1;
 Constant Story_Author BC_2;
 Release 1;
-Serial "170216";
+Serial "170221";
 
 Default Story 0;
 Default Headline 0;
@@ -11046,6 +11046,7 @@ Object selfobj ""
 Object I125_main_plaza ""
     class K1_room
     with short_name BC_148
+    with description BC_149
     has proper
     with vector 0
     with room_index -1
@@ -11054,7 +11055,6 @@ Object I125_main_plaza ""
     with IK1_Link I126_safari_zone
     with KD_Count 1
     with name 'main' 'plaza' 'rooms//p' 
-    with description BC_149
     with list_together BC_150
     with plural BC_151
     with article BC_152
@@ -12778,18 +12778,38 @@ Array ActionHappened --> 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Instead (B20_instead)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/6 ! Instead of giving apple to monkey:
+! Rule 1/6 ! Instead of going to the pool:
+!   >>> III.2.2 - Action/Where/Room Where Action Takes Place >>>
+! Rule 2/6 ! Instead of giving apple to monkey:
 !   === equally specific with ===
-! Rule 2/6 ! Instead of combining rope with collar:
+! Rule 3/6 ! Instead of combining rope with collar:
 !   === equally specific with ===
-! Rule 3/6 ! Instead of combining collar with rope:
+! Rule 4/6 ! Instead of combining collar with rope:
 !   >>> III.3.2 - Action/What/Thing Acted On >>>
-! Rule 4/6 ! Instead of giving something to monkey:
+! Rule 5/6 ! Instead of giving something to monkey:
 !   >>> III.3.1 - Action/What/Second Thing Acted On >>>
-! Rule 5/6 ! Instead of player entering pool:
-!   >>> III.3.3 - Action/What/Actor Performing Action >>>
 ! Rule 6/6 ! Instead of taking rope:
 ! ----------------------------------------------------------------------------------------------------
+! No specific request
+! Instead of going to the pool:
+[ R_799 ;
+    if ((((action ==##Go) &&  (actor==player) && (((MStack-->MstVON(20007,1)) == I136_pool) && (true))))) { ! Runs only when pattern matches
+    self = noun;
+    if (debug_rules) DB_Rule(R_799, 799);
+    ! [2: if player is wearing scuba tank]
+    if (((player == WearerOf(I143_scuba_tank))))
+    {! [3: say ~you jump into the water.~]
+        say__p=1;! [4: ~you jump into the water.~]
+        ParaContent(); print "you jump into the water."; new_line; .L_Say3; .L_SayX3;! [5: continue the action]
+        rfalse;
+        } else {
+        ! [6: say ~you can't enter without air!~]
+        say__p=1;! [7: ~you can't enter without air!~]
+        ParaContent(); print "you can't enter without air!"; new_line; .L_Say4; .L_SayX4;}
+        RulebookFails(); rtrue;
+        } else if (debug_rules > 1) DB_Rule(R_799, 799, 'action');
+        rfalse;
+];
 ! No specific request
 ! Instead of giving apple to monkey:
 [ R_800 ;
@@ -12798,7 +12818,7 @@ Array ActionHappened --> 0 0 0 0 0;
     if (debug_rules) DB_Rule(R_800, 800);
     ! [2: say ~the monkey looks at the nasty little half eaten apple and starts devouring the little morsel~]
     say__p=1;! [3: ~the monkey looks at the nasty little half eaten apple and starts devouring the little morsel~]
-    ParaContent(); print "the monkey looks at the nasty little half eaten apple and starts devouring the little morsel"; .L_Say3; .L_SayX3;! [4: move apple to monkey]
+    ParaContent(); print "the monkey looks at the nasty little half eaten apple and starts devouring the little morsel"; .L_Say5; .L_SayX5;! [4: move apple to monkey]
     MoveObject(I149_apple, I147_monkey, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_800, 800, 'action');
@@ -12812,7 +12832,7 @@ Array ActionHappened --> 0 0 0 0 0;
     if (debug_rules) DB_Rule(R_803, 803);
     ! [2: say ~You combine the rope and collar to make a leash.~]
     say__p=1;! [3: ~You combine the rope and collar to make a leash.~]
-    ParaContent(); print "You combine the rope and collar to make a leash."; new_line; .L_Say4; .L_SayX4;! [4: remove rope from play]
+    ParaContent(); print "You combine the rope and collar to make a leash."; new_line; .L_Say6; .L_SayX6;! [4: remove rope from play]
     RemoveFromPlay(I146_rope);
     ! [5: remove collar from play]
     RemoveFromPlay(I144_collar);
@@ -12830,7 +12850,7 @@ Array ActionHappened --> 0 0 0 0 0;
     if (debug_rules) DB_Rule(R_804, 804);
     ! [2: say ~You combine the rope and collar to make a leash.~]
     say__p=1;! [3: ~You combine the rope and collar to make a leash.~]
-    ParaContent(); print "You combine the rope and collar to make a leash."; new_line; .L_Say5; .L_SayX5;! [4: remove rope from play]
+    ParaContent(); print "You combine the rope and collar to make a leash."; new_line; .L_Say7; .L_SayX7;! [4: remove rope from play]
     RemoveFromPlay(I146_rope);
     ! [5: remove collar from play]
     RemoveFromPlay(I144_collar);
@@ -12848,29 +12868,9 @@ Array ActionHappened --> 0 0 0 0 0;
     if (debug_rules) DB_Rule(R_801, 801);
     ! [2: say ~Monkey laughts in your face and runs around shrieking~]
     say__p=1;! [3: ~Monkey laughts in your face and runs around shrieking~]
-    ParaContent(); print "Monkey laughts in your face and runs around shrieking"; .L_Say6; .L_SayX6;RulebookFails(); rtrue;
+    ParaContent(); print "Monkey laughts in your face and runs around shrieking"; .L_Say8; .L_SayX8;RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_801, 801, 'action');
     rfalse;
-];
-! No specific request
-! Instead of player entering pool:
-[ R_799 ;
-    if ((((action ==##Enter) &&  (actor==player) && ((noun == I136_pool) && (true))))) { ! Runs only when pattern matches
-    self = noun;
-    if (debug_rules) DB_Rule(R_799, 799);
-    ! [2: if player is wearing scuba tank]
-    if (((player == WearerOf(I143_scuba_tank))))
-    {! [3: say ~you jump into the water.~]
-        say__p=1;! [4: ~you jump into the water.~]
-        ParaContent(); print "you jump into the water."; new_line; .L_Say7; .L_SayX7;! [5: move player to pool]
-        MoveObject(player, I136_pool, 0, false);
-        } else {
-        ! [6: say ~you can't enter without air!~]
-        say__p=1;! [7: ~you can't enter without air!~]
-        ParaContent(); print "you can't enter without air!"; new_line; .L_Say8; .L_SayX8;}
-        RulebookFails(); rtrue;
-        } else if (debug_rules > 1) DB_Rule(R_799, 799, 'action');
-        rfalse;
 ];
 ! No specific request
 ! Instead of taking rope:
@@ -22170,7 +22170,19 @@ Constant B19_before = EMPTY_RULEBOOK;
     original_deadflag ! saved state
     ;
     original_deadflag = deadflag;
+    if (action == ##Go) {
+        rv = R_799();
+        if (rv) {
+            if (rv == 2) return reason_the_action_failed;
+            return R_799;
+        }
+        latest_rule_result-->0 = 0;
+    } else {
+        if (say__p) RulebookParBreak(forbid_breaks);
+    }
     if (action == ##Give) {
+        if (original_deadflag ~= deadflag) return 0;
+        if (say__p) RulebookParBreak(forbid_breaks);
         rv = R_800();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
@@ -22207,18 +22219,6 @@ Constant B19_before = EMPTY_RULEBOOK;
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
             return R_801;
-        }
-        latest_rule_result-->0 = 0;
-    } else {
-        if (say__p) RulebookParBreak(forbid_breaks);
-    }
-    if (action == ##Enter) {
-        if (original_deadflag ~= deadflag) return 0;
-        if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_799();
-        if (rv) {
-            if (rv == 2) return reason_the_action_failed;
-            return R_799;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -30098,7 +30098,7 @@ Array RulebookNames -->
         if (R == R_32) { print "last specific action-processing rule"; rtrue; } ! rule 345
         if (R == R_174) { print "Setting action variables for exiting"; rtrue; } ! rule 346
         if (R == R_242) { print "Does the player mean taking off something worn"; rtrue; } ! rule 347
-        if (R == R_799) { print "Instead of player entering pool"; rtrue; } ! rule 348
+        if (R == R_799) { print "Instead of going to the pool"; rtrue; } ! rule 348
         if (R == R_800) { print "Instead of giving apple to monkey"; rtrue; } ! rule 349
         if (R == R_801) { print "Instead of giving something to monkey"; rtrue; } ! rule 350
         if (R == R_802) { print "Instead of taking rope"; rtrue; } ! rule 351
@@ -49396,62 +49396,63 @@ Verb 'combine'
 
 
 
-Constant TX_PS_65 = " ~blub blub~ the water is very chilly down here ~blub blub~ you can see a fish next to ~blub blub~ some coral on the ground.";
-Constant TX_PS_72 = " a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him...";
-Constant TX_PS_85 = ">";
-Constant TX_PS_57 = "A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner";
-Constant TX_PS_36 = "A opening with many different animal cages around it. There is a sign in the middle of the opening";
-Constant TX_PS_45 = "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner";
-Constant TX_PS_71 = "Alpha";
+Constant TX_PS_66 = " ~blub blub~ the water is very chilly down here ~blub blub~ you can see a fish next to ~blub blub~ some coral on the ground.";
+Constant TX_PS_73 = " a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him...";
+Constant TX_PS_86 = ">";
+Constant TX_PS_35 = "A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east";
+Constant TX_PS_58 = "A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner. Tee main plaza is to the west and the dolphin encosure is to the east.";
+Constant TX_PS_37 = "A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.";
+Constant TX_PS_46 = "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner. The Main Plaza is to the east";
+Constant TX_PS_72 = "Alpha";
 Constant TX_PS_3 = "An Interactive Fiction";
-Constant TX_PS_69 = "Ape Cage";
-Constant TX_PS_54 = "Apple";
-Constant TX_PS_56 = "Aquatic Center";
+Constant TX_PS_70 = "Ape Cage";
+Constant TX_PS_55 = "Apple";
+Constant TX_PS_57 = "Aquatic Center";
 Constant TX_PS_32 = "As good-looking as ever.";
-Constant TX_PS_44 = "Bathroom";
-Constant TX_PS_64 = "Bottom of Pool";
+Constant TX_PS_45 = "Bathroom";
+Constant TX_PS_65 = "Bottom of Pool";
 Constant TX_PS_4 = "Christian Yuh";
-Constant TX_PS_68 = "Coral";
-Constant TX_PS_60 = "Dolphin enclosure";
-Constant TX_PS_86 = "Fiction";
+Constant TX_PS_69 = "Coral";
+Constant TX_PS_61 = "Dolphin enclosure";
+Constant TX_PS_87 = "Fiction";
 Constant TX_PS_2 = "Keys please";
-Constant TX_PS_83 = "Leash";
-Constant TX_PS_77 = "Lions cage";
+Constant TX_PS_84 = "Leash";
+Constant TX_PS_78 = "Lions cage";
 Constant TX_PS_34 = "Main Plaza";
-Constant TX_PS_62 = "Pool";
-Constant TX_PS_79 = "Pride Rock";
-Constant TX_PS_90 = "QUIT";
-Constant TX_PS_87 = "RESTART";
-Constant TX_PS_88 = "RESTORE a saved game";
-Constant TX_PS_35 = "Safari Zone";
-Constant TX_PS_42 = "Shark teeth";
-Constant TX_PS_78 = "The cage for the king of the jungle. You see a scuba tank inside the enclosure.";
-Constant TX_PS_80 = "The rock where the lions hang out. A big lion is eyeing you 30 ft away. ";
-Constant TX_PS_91 = "UNDO the last command";
-Constant TX_PS_61 = "You are on the balcony of the dolphin enclosure. the water looks very nice and calm.";
+Constant TX_PS_63 = "Pool";
+Constant TX_PS_80 = "Pride Rock";
+Constant TX_PS_91 = "QUIT";
+Constant TX_PS_88 = "RESTART";
+Constant TX_PS_89 = "RESTORE a saved game";
+Constant TX_PS_36 = "Safari Zone";
+Constant TX_PS_43 = "Shark teeth";
+Constant TX_PS_79 = "The cage for the king of the jungle. You see a scuba tank inside the enclosure.";
+Constant TX_PS_81 = "The rock where the lions hang out. A big lion is eyeing you 30 ft away. ";
+Constant TX_PS_92 = "UNDO the last command";
+Constant TX_PS_62 = "You are on the balcony of the dolphin enclosure. the water looks very nice and calm. The aquatic center is to the west and the pool is below";
 Constant TX_PS_33 = "Yourself";
-Constant TX_PS_59 = "Zone for the most epic water animals of the world. Safari zone cannot hang.";
-Constant TX_PS_38 = "Zone for the most land epic animals of the world. Aquatic zone cannot hang.";
-Constant TX_PS_51 = "a big black collar with spikes on the outside. its so big you can fit it around barney the dinosaur!";
-Constant TX_PS_74 = "a blue nylon rope that smells like monkey";
-Constant TX_PS_70 = "a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!";
-Constant TX_PS_41 = "a cool kids table shaped like a llama. You spot  some shark teeth right on the edge.";
-Constant TX_PS_53 = "a groddy trashcan";
-Constant TX_PS_55 = "a half eaten apple";
-Constant TX_PS_76 = "a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.";
-Constant TX_PS_43 = "a sharp object that is brownish white. Sharks need to brush their teeth more!";
-Constant TX_PS_82 = "a tank full of air that will help propel you into the deep.";
-Constant TX_PS_49 = "a wooden cubboard, there may be something inside";
-Constant TX_PS_47 = "an ugly man melts out of the mirror causing you to panic...when suddenly you realize it is you.";
+Constant TX_PS_60 = "Zone for the most epic water animals of the world. Safari zone cannot hang.";
+Constant TX_PS_39 = "Zone for the most land epic animals of the world. Aquatic zone cannot hang.";
+Constant TX_PS_52 = "a big black collar with spikes on the outside. its so big you can fit it around barney the dinosaur!";
+Constant TX_PS_75 = "a blue nylon rope that smells like monkey";
+Constant TX_PS_71 = "a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!";
+Constant TX_PS_42 = "a cool kids table shaped like a llama. You spot  some shark teeth right on the edge.";
+Constant TX_PS_54 = "a groddy trashcan";
+Constant TX_PS_56 = "a half eaten apple";
+Constant TX_PS_77 = "a scumbag little monkey that is laughing at you. He seems to have a rope in his hands.";
+Constant TX_PS_44 = "a sharp object that is brownish white. Sharks need to brush their teeth more!";
+Constant TX_PS_83 = "a tank full of air that will help propel you into the deep.";
+Constant TX_PS_50 = "a wooden cubboard, there may be something inside";
+Constant TX_PS_48 = "an ugly man melts out of the mirror causing you to panic...when suddenly you realize it is you.";
 Constant TX_PS_9 = "animals";
-Constant TX_PS_58 = "aquatic sign";
-Constant TX_PS_39 = "aquatic zone";
+Constant TX_PS_59 = "aquatic sign";
+Constant TX_PS_40 = "aquatic zone";
 Constant TX_PS_14 = "backdrops";
-Constant TX_PS_84 = "big enough to fit around the king of the jungle";
-Constant TX_PS_50 = "collar";
+Constant TX_PS_85 = "big enough to fit around the king of the jungle";
+Constant TX_PS_51 = "collar";
 Constant TX_PS_11 = "containers";
-Constant TX_PS_66 = "coral";
-Constant TX_PS_48 = "cubboard";
+Constant TX_PS_67 = "coral";
+Constant TX_PS_49 = "cubboard";
 Constant TX_PS_15 = "devices";
 Constant TX_PS_17 = "directions";
 Constant TX_PS_10 = "doors";
@@ -49459,8 +49460,8 @@ Constant TX_PS_28 = "down";
 Constant TX_PS_25 = "east";
 Constant TX_PS_29 = "inside";
 Constant TX_PS_7 = "men";
-Constant TX_PS_46 = "mirror";
-Constant TX_PS_75 = "monkey";
+Constant TX_PS_47 = "mirror";
+Constant TX_PS_76 = "monkey";
 Constant TX_PS_18 = "north";
 Constant TX_PS_20 = "northeast";
 Constant TX_PS_21 = "northwest";
@@ -49468,19 +49469,19 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_73 = "rope";
-Constant TX_PS_81 = "scuba tank";
-Constant TX_PS_89 = "see some suggestions for AMUSING things to do";
-Constant TX_PS_37 = "sign";
-Constant TX_PS_67 = "some beautiful orange coral in the water.";
+Constant TX_PS_74 = "rope";
+Constant TX_PS_82 = "scuba tank";
+Constant TX_PS_90 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_38 = "sign";
+Constant TX_PS_68 = "some beautiful orange coral in the water.";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
 Constant TX_PS_5 = "supporters";
-Constant TX_PS_40 = "table";
-Constant TX_PS_63 = "the water feels very warm up here, you see some fish down below.";
+Constant TX_PS_41 = "table";
+Constant TX_PS_64 = "the water feels very warm up here, you see some fish down below. The bottom of the pool is below.";
 Constant TX_PS_19 = "the";
-Constant TX_PS_52 = "trashcan";
+Constant TX_PS_53 = "trashcan";
 Constant TX_PS_27 = "up";
 Constant TX_PS_12 = "vehicles";
 Constant TX_PS_26 = "west";
@@ -56788,162 +56789,162 @@ Array BC_145 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_146 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_147 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_148 --> PACKED_TEXT_STORAGE TX_PS_34;
-Array BC_149 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_149 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_150 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_151 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_152 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_35;
-Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_37;
 Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_157 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_158 --> PACKED_TEXT_STORAGE TX_PS_37;
-Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_38;
+Array BC_158 --> PACKED_TEXT_STORAGE TX_PS_38;
+Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_39;
 Array BC_160 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_161 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_39;
+Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_40;
 Array BC_165 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_166 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_168 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_40;
-Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_42;
 Array BC_172 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_175 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_42;
-Array BC_177 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_177 --> PACKED_TEXT_STORAGE TX_PS_44;
 Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_179 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_181 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_44;
-Array BC_183 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_183 --> PACKED_TEXT_STORAGE TX_PS_46;
 Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_48;
 Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_190 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_192 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_48;
-Array BC_194 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_194 --> PACKED_TEXT_STORAGE TX_PS_50;
 Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_198 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_50;
-Array BC_200 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_200 --> PACKED_TEXT_STORAGE TX_PS_52;
 Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_203 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_204 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_205 --> PACKED_TEXT_STORAGE TX_PS_52;
-Array BC_206 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_205 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_206 --> PACKED_TEXT_STORAGE TX_PS_54;
 Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_210 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_211 --> PACKED_TEXT_STORAGE TX_PS_54;
-Array BC_212 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_211 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_212 --> PACKED_TEXT_STORAGE TX_PS_56;
 Array BC_213 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_214 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_215 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_216 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_217 --> PACKED_TEXT_STORAGE TX_PS_56;
-Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_217 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_58;
 Array BC_219 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_220 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_221 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_58;
-Array BC_223 --> PACKED_TEXT_STORAGE TX_PS_59;
+Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_59;
+Array BC_223 --> PACKED_TEXT_STORAGE TX_PS_60;
 Array BC_224 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_225 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_226 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_227 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_60;
-Array BC_229 --> PACKED_TEXT_STORAGE TX_PS_61;
+Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_61;
+Array BC_229 --> PACKED_TEXT_STORAGE TX_PS_62;
 Array BC_230 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_231 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_232 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_233 --> PACKED_TEXT_STORAGE TX_PS_62;
-Array BC_234 --> PACKED_TEXT_STORAGE TX_PS_63;
+Array BC_233 --> PACKED_TEXT_STORAGE TX_PS_63;
+Array BC_234 --> PACKED_TEXT_STORAGE TX_PS_64;
 Array BC_235 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_236 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_237 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_238 --> PACKED_TEXT_STORAGE TX_PS_64;
-Array BC_239 --> PACKED_TEXT_STORAGE TX_PS_65;
+Array BC_238 --> PACKED_TEXT_STORAGE TX_PS_65;
+Array BC_239 --> PACKED_TEXT_STORAGE TX_PS_66;
 Array BC_240 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_241 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_242 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_243 --> PACKED_TEXT_STORAGE TX_PS_66;
-Array BC_244 --> PACKED_TEXT_STORAGE TX_PS_67;
-Array BC_245 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_243 --> PACKED_TEXT_STORAGE TX_PS_67;
+Array BC_244 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_245 --> PACKED_TEXT_STORAGE TX_PS_69;
 Array BC_246 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_247 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_248 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_249 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_250 --> PACKED_TEXT_STORAGE TX_PS_69;
-Array BC_251 --> PACKED_TEXT_STORAGE TX_PS_70;
+Array BC_250 --> PACKED_TEXT_STORAGE TX_PS_70;
+Array BC_251 --> PACKED_TEXT_STORAGE TX_PS_71;
 Array BC_252 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_253 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_254 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_255 --> PACKED_TEXT_STORAGE TX_PS_71;
-Array BC_256 --> PACKED_TEXT_STORAGE TX_PS_72;
+Array BC_255 --> PACKED_TEXT_STORAGE TX_PS_72;
+Array BC_256 --> PACKED_TEXT_STORAGE TX_PS_73;
 Array BC_257 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_258 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_259 --> PACKED_TEXT_STORAGE TX_PS_9;
 Array BC_260 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_261 --> PACKED_TEXT_STORAGE TX_PS_73;
-Array BC_262 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_261 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_262 --> PACKED_TEXT_STORAGE TX_PS_75;
 Array BC_263 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_264 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_265 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_266 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_267 --> PACKED_TEXT_STORAGE TX_PS_75;
-Array BC_268 --> PACKED_TEXT_STORAGE TX_PS_76;
+Array BC_267 --> PACKED_TEXT_STORAGE TX_PS_76;
+Array BC_268 --> PACKED_TEXT_STORAGE TX_PS_77;
 Array BC_269 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_270 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_271 --> PACKED_TEXT_STORAGE TX_PS_9;
 Array BC_272 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_273 --> PACKED_TEXT_STORAGE TX_PS_77;
-Array BC_274 --> PACKED_TEXT_STORAGE TX_PS_78;
+Array BC_273 --> PACKED_TEXT_STORAGE TX_PS_78;
+Array BC_274 --> PACKED_TEXT_STORAGE TX_PS_79;
 Array BC_275 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_276 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_277 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_79;
-Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_80;
+Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_80;
+Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_81;
 Array BC_280 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_281 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_282 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_283 --> PACKED_TEXT_STORAGE TX_PS_81;
-Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_82;
+Array BC_283 --> PACKED_TEXT_STORAGE TX_PS_82;
+Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_83;
 Array BC_285 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_286 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_287 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_289 --> PACKED_TEXT_STORAGE TX_PS_83;
-Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_84;
+Array BC_289 --> PACKED_TEXT_STORAGE TX_PS_84;
+Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_85;
 Array BC_291 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_292 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_293 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_85;
+Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_86;
 Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_4;
 Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_86;
+Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_87;
 Array BC_299 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_300 --> PACKED_TEXT_STORAGE TX_PS_87;
-Array BC_301 --> PACKED_TEXT_STORAGE TX_PS_88;
-Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_89;
-Array BC_303 --> PACKED_TEXT_STORAGE TX_PS_90;
-Array BC_304 --> PACKED_TEXT_STORAGE TX_PS_91;
+Array BC_300 --> PACKED_TEXT_STORAGE TX_PS_88;
+Array BC_301 --> PACKED_TEXT_STORAGE TX_PS_89;
+Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_90;
+Array BC_303 --> PACKED_TEXT_STORAGE TX_PS_91;
+Array BC_304 --> PACKED_TEXT_STORAGE TX_PS_92;
 
 
 

@@ -1,8 +1,8 @@
 "Keys please" by Christian Yuh
 
-Main Plaza is a room. 
+Main Plaza is a room. "A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east"
 
-Safari Zone is a room. Safari Zone is south of Main Plaza. "A opening with many different animal cages around it. There is a sign in the middle of the opening"
+Safari Zone is a room. Safari Zone is south of Main Plaza. "A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west."
 
 the table is scenery. The table is in the aquatic zone. The description is "a cool kids table shaped like a llama. You spot  some shark teeth right on the edge."
 
@@ -10,25 +10,26 @@ Shark teeth is thing in the aquatic zone. The description is "a sharp object tha
 
 The sign is scenery in the safari zone. The description is "Zone for the most land epic animals of the world. Aquatic zone cannot hang." 
 
-Bathroom is a room. Bathroom is west of Main Plaza. "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner"
+Bathroom is a room. Bathroom is west of Main Plaza. "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner. The Main Plaza is to the east"
 
-Aquatic Center is a room. Aquatic Center is east of Main Plaza. "A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner"
+Aquatic Center is a room. Aquatic Center is east of Main Plaza. "A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner. Tee main plaza is to the west and the dolphin encosure is to the east."
 
 The aquatic sign is scenery in the aquatic center. The description is "Zone for the most epic water animals of the world. Safari zone cannot hang."
 
 The mirror is scenery in the bathroom. The description is "an ugly man melts out of the mirror causing you to panic...when suddenly you realize it is you."
 
-Dolphin enclosure is a room. Dolphin enclosure is east of Aquatic Center."You are on the balcony of the dolphin enclosure. the water looks very nice and calm."
+Dolphin enclosure is a room. Dolphin enclosure is east of Aquatic Center."You are on the balcony of the dolphin enclosure. the water looks very nice and calm. The aquatic center is to the west and the pool is below"
 
-Instead of player entering pool:
+Instead of going to the pool:
 	if player is wearing scuba tank:
 		say "you jump into the water.";
-		 move player to pool;
+		 continue the action;
 	Otherwise: 
-		say "you can't enter without air!"
+		say "you can't enter without air!";
+	
+	
 
-
-Pool is a room. Pool is below dolphin enclosure. the description is "the water feels very warm up here, you see some fish down below."
+Pool is a room. Pool is below dolphin enclosure. the description is "the water feels very warm up here, you see some fish down below. The bottom of the pool is below."
 
 Bottom of Pool is a room. Bottom of Pool is below Pool. The description is " 'blub blub' the water is very chilly down here 'blub blub' you can see a fish next to 'blub blub' some coral on the ground."
 
