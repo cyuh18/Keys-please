@@ -97,7 +97,12 @@ instead of giving meat to lion:
 Instead of giving something to lion:
 	say "lion charges at you and you barely dodge his attack. He doesn't want to be friends."
 
-
+Instead of putting leash on lion:
+	if Lion has meat:
+		Say "You put the leash on the lion and he will follow you around now! What a awesome pet.";
+	otherwise:
+		say "The lion is pissed off and tries to bite your head off. This is not a good idea."
+		
 
 The Alpha is a male animal. The Alpha is in the Ape Cage. the Alpha is undescribed. The description of the alpha is " a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him..."
 
