@@ -8,7 +8,6 @@ the table is scenery. The table is in the aquatic zone. The description is "a co
 
 Shark tooth is thing. It is in the aquatic center. It unlocks the treasure chest. The description is "a sharp object that is brownish white. Sharks need to brush their teeth more!"
 
-The meat is in the treasure chest. The description is "a huge tasty chunk of meat used to tame the mightest of animals." 
 
 The sign is scenery in the safari zone. The description is "Zone for the most land epic animals of the world. Aquatic zone cannot hang." 
 
@@ -47,6 +46,8 @@ The cubboard is a container in the bathroom. It is a closed openable container. 
 
 The treasure chest is a container in the Bottom of Pool. It is a closed locked lockable container. The treasure chest is undescribed. The description is "a beautiful treasure chest layered in diamond with a tooth shaped lock."
 
+Meat is a thing in the treasure chest. The description is "a huge tasty chunk of meat used to tame the mightest of animals." 
+
 The rope is a thing in the Ape Cage. The rope is undescribed. The description of the rope is "a blue nylon rope that smells like monkey"
 		
 The monkey is a male animal. The monkey is in the Ape Cage. The monkey is undescribed. The description of a monkey is "a scumbag little monkey that is laughing at you. He seems to have a rope in his hands."
@@ -61,6 +62,7 @@ Instead of giving apple to monkey:
 		
 Instead of giving something to monkey:
 	say "Monkey laughts in your face and runs around shrieking"
+	
 
 Instead of taking rope:
 	if monkey has apple:
@@ -104,6 +106,8 @@ Instead of putting leash on lion:
 		say "The lion is pissed off and tries to bite your head off. This is not a good idea."
 		
 
+
+
 The Alpha is a male animal. The Alpha is in the Ape Cage. the Alpha is undescribed. The description of the alpha is " a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him..."
 
 The house key is a thing in the Ape Cage. The house key is undescribed. The description of the house key is "your brass and silver keys! Finally!"
@@ -115,4 +119,8 @@ Instead of taking house key:
 	Otherwise:
 		say "Alpha monkey bares his teeth and tries to rip your head off. Maybe trying to take them now is not such a good idea..."
 		
+An every turn rule:
+	if the player is carrying the house key:
+		say "you win!";
+		end the story finally. 
 

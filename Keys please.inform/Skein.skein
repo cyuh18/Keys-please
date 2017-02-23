@@ -9,7 +9,7 @@
 
 Keys please
 An Interactive Fiction by Christian Yuh
-Release 1 / Serial number 170222 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170223 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Main Plaza
 A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
@@ -1383,6 +1383,7 @@ a cage for the most annoying animals on the planet. You see a little monkey smil
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1199"></child>
             <child nodeId="node-1150"></child>
+            <child nodeId="node-1370"></child>
             <child nodeId="node-1149"></child>
             <child nodeId="node-1146"></child>
             <child nodeId="node-1144"></child>
@@ -1432,6 +1433,738 @@ a cage for the most annoying animals on the planet. You see a little monkey smil
     <item nodeId="node-1149">
         <command xml:space="preserve">x alpha</command>
         <result xml:space="preserve"> a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse, claws as sharp as knives. Only a king can rival him...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1370">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1371"></child>
+        </children>
+    </item>
+    <item nodeId="node-1371">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1372"></child>
+        </children>
+    </item>
+    <item nodeId="node-1372">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Lions cage
+The cage for the king of the jungle. You see a scuba tank inside the enclosure.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1373"></child>
+        </children>
+    </item>
+    <item nodeId="node-1373">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Pride Rock
+The rock where the lions hang out. A big lion is eyeing you 30 ft away. 
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1374"></child>
+        </children>
+    </item>
+    <item nodeId="node-1374">
+        <command xml:space="preserve">take tank</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1375"></child>
+        </children>
+    </item>
+    <item nodeId="node-1375">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Lions cage
+The cage for the king of the jungle. You see a scuba tank inside the enclosure.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1376"></child>
+        </children>
+    </item>
+    <item nodeId="node-1376">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1377"></child>
+        </children>
+    </item>
+    <item nodeId="node-1377">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Plaza
+A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1378"></child>
+        </children>
+    </item>
+    <item nodeId="node-1378">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Bathroom
+A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner. The Main Plaza is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1379"></child>
+        </children>
+    </item>
+    <item nodeId="node-1379">
+        <command xml:space="preserve">take collar</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1380"></child>
+        </children>
+    </item>
+    <item nodeId="node-1380">
+        <command xml:space="preserve">open cubboard</command>
+        <result xml:space="preserve">You open the cubboard, revealing a collar.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1381"></child>
+        </children>
+    </item>
+    <item nodeId="node-1381">
+        <command xml:space="preserve">take collar</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1382"></child>
+        </children>
+    </item>
+    <item nodeId="node-1382">
+        <command xml:space="preserve">open trashcan</command>
+        <result xml:space="preserve">You open the trashcan, revealing Apple.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1383"></child>
+        </children>
+    </item>
+    <item nodeId="node-1383">
+        <command xml:space="preserve">take apple</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1384"></child>
+        </children>
+    </item>
+    <item nodeId="node-1384">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1385"></child>
+        </children>
+    </item>
+    <item nodeId="node-1385">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Plaza
+A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1386"></child>
+        </children>
+    </item>
+    <item nodeId="node-1386">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+aquatic center
+A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner. The main plaza is to the west and the dolphin encosure is to the east.
+
+You can see Shark tooth here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1387"></child>
+        </children>
+    </item>
+    <item nodeId="node-1387">
+        <command xml:space="preserve">take shark tooth</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1388"></child>
+        </children>
+    </item>
+    <item nodeId="node-1388">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Plaza
+A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1389"></child>
+        </children>
+    </item>
+    <item nodeId="node-1389">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1390"></child>
+        </children>
+    </item>
+    <item nodeId="node-1390">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1391"></child>
+        </children>
+    </item>
+    <item nodeId="node-1391">
+        <command xml:space="preserve">give monkey apple</command>
+        <result xml:space="preserve">the monkey looks at the nasty little half eaten apple and starts devouring the little morsel
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1392"></child>
+        </children>
+    </item>
+    <item nodeId="node-1392">
+        <command xml:space="preserve">take leash</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1393"></child>
+        </children>
+    </item>
+    <item nodeId="node-1393">
+        <command xml:space="preserve">take rope</command>
+        <result xml:space="preserve">monkey is distracted by his tasty apple and you steal the rope
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1394"></child>
+        </children>
+    </item>
+    <item nodeId="node-1394">
+        <command xml:space="preserve">combine rope with collar</command>
+        <result xml:space="preserve">You combine the rope and collar to make a leash.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1395"></child>
+        </children>
+    </item>
+    <item nodeId="node-1395">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1396"></child>
+        </children>
+    </item>
+    <item nodeId="node-1396">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Plaza
+A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1397"></child>
+        </children>
+    </item>
+    <item nodeId="node-1397">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1398"></child>
+        </children>
+    </item>
+    <item nodeId="node-1398">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Plaza
+A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1399"></child>
+        </children>
+    </item>
+    <item nodeId="node-1399">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+aquatic center
+A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner. The main plaza is to the west and the dolphin encosure is to the east.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1400"></child>
+        </children>
+    </item>
+    <item nodeId="node-1400">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Dolphin enclosure
+You are on the balcony of the dolphin enclosure. the water looks very nice and calm. The aquatic center is to the west and the pool is below
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1401"></child>
+        </children>
+    </item>
+    <item nodeId="node-1401">
+        <command xml:space="preserve">wear tank</command>
+        <result xml:space="preserve">You put on the scuba tank.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1402"></child>
+        </children>
+    </item>
+    <item nodeId="node-1402">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">you jump into the water.
+
+Pool
+the water feels very warm up here, you see some fish down below. The bottom of the pool is below.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1403"></child>
+        </children>
+    </item>
+    <item nodeId="node-1403">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of Pool
+ "blub blub" the water is very chilly down here "blub blub" you can see a fish next to "blub blub" a treasure chest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1404"></child>
+        </children>
+    </item>
+    <item nodeId="node-1404">
+        <command xml:space="preserve">open treasure chest</command>
+        <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1405"></child>
+        </children>
+    </item>
+    <item nodeId="node-1405">
+        <command xml:space="preserve">use shark tooth</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1406"></child>
+        </children>
+    </item>
+    <item nodeId="node-1406">
+        <command xml:space="preserve">unlock chest</command>
+        <result xml:space="preserve">What do you want to unlock the treasure chest with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1407"></child>
+        </children>
+    </item>
+    <item nodeId="node-1407">
+        <command xml:space="preserve">unlock chest with sharktooth</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1408"></child>
+        </children>
+    </item>
+    <item nodeId="node-1408">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Leash
+  Shark tooth
+  a scuba tank (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1409"></child>
+        </children>
+    </item>
+    <item nodeId="node-1409">
+        <command xml:space="preserve">unlock chest with shark tooth</command>
+        <result xml:space="preserve">You unlock the treasure chest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1410"></child>
+        </children>
+    </item>
+    <item nodeId="node-1410">
+        <command xml:space="preserve">x chest</command>
+        <result xml:space="preserve">a beautiful treasure chest layered in diamond with a tooth shaped lock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1454"></child>
+        </children>
+    </item>
+    <item nodeId="node-1454">
+        <command xml:space="preserve">take meat</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1455"></child>
+        </children>
+    </item>
+    <item nodeId="node-1455">
+        <command xml:space="preserve">take meat</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1456"></child>
+        </children>
+    </item>
+    <item nodeId="node-1456">
+        <command xml:space="preserve">x meat</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1457"></child>
+        </children>
+    </item>
+    <item nodeId="node-1457">
+        <command xml:space="preserve">meat</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1458"></child>
+        </children>
+    </item>
+    <item nodeId="node-1458">
+        <command xml:space="preserve">take meat</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1459"></child>
+        </children>
+    </item>
+    <item nodeId="node-1459">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1509"></child>
+        </children>
+    </item>
+    <item nodeId="node-1509">
+        <command xml:space="preserve">x chest</command>
+        <result xml:space="preserve">a beautiful treasure chest layered in diamond with a tooth shaped lock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1510"></child>
+        </children>
+    </item>
+    <item nodeId="node-1510">
+        <command xml:space="preserve">take meat</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1562"></child>
+        </children>
+    </item>
+    <item nodeId="node-1562">
+        <command xml:space="preserve">take meat</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1563"></child>
+        </children>
+    </item>
+    <item nodeId="node-1563">
+        <command xml:space="preserve">x chest</command>
+        <result xml:space="preserve">a beautiful treasure chest layered in diamond with a tooth shaped lock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1564"></child>
+        </children>
+    </item>
+    <item nodeId="node-1564">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Leash
+  Shark tooth
+  a scuba tank (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1565"></child>
+        </children>
+    </item>
+    <item nodeId="node-1565">
+        <command xml:space="preserve">open chest</command>
+        <result xml:space="preserve">You open the treasure chest, revealing meat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1566"></child>
+        </children>
+    </item>
+    <item nodeId="node-1566">
+        <command xml:space="preserve">take meat</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1567"></child>
+        </children>
+    </item>
+    <item nodeId="node-1567">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">you jump into the water.
+
+Pool
+the water feels very warm up here, you see some fish down below. The bottom of the pool is below.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1568"></child>
+        </children>
+    </item>
+    <item nodeId="node-1568">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Dolphin enclosure
+You are on the balcony of the dolphin enclosure. the water looks very nice and calm. The aquatic center is to the west and the pool is below
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1569"></child>
+        </children>
+    </item>
+    <item nodeId="node-1569">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+aquatic center
+A center with many different exibits around it. There is a sign in the middle of the opening and a table in the corner. The main plaza is to the west and the dolphin encosure is to the east.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1570"></child>
+        </children>
+    </item>
+    <item nodeId="node-1570">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Plaza
+A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1571"></child>
+        </children>
+    </item>
+    <item nodeId="node-1571">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1572"></child>
+        </children>
+    </item>
+    <item nodeId="node-1572">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1573"></child>
+        </children>
+    </item>
+    <item nodeId="node-1573">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Lions cage
+The cage for the king of the jungle. You see a scuba tank inside the enclosure.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1574"></child>
+        </children>
+    </item>
+    <item nodeId="node-1574">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Pride Rock
+The rock where the lions hang out. A big lion is eyeing you 30 ft away. 
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1575"></child>
+        </children>
+    </item>
+    <item nodeId="node-1575">
+        <command xml:space="preserve">x lion</command>
+        <result xml:space="preserve">The king of the jungle. It is angry and you can't get near him...maybe you can tame him with some food?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1576"></child>
+        </children>
+    </item>
+    <item nodeId="node-1576">
+        <command xml:space="preserve">give meat to lion</command>
+        <result xml:space="preserve">Lion devours the piece of meat and starts cuddling with you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1577"></child>
+        </children>
+    </item>
+    <item nodeId="node-1577">
+        <command xml:space="preserve">put leash on lion</command>
+        <result xml:space="preserve">You put the leash on the lion and he will follow you around now! What a awesome pet.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1854"></child>
+        </children>
+    </item>
+    <item nodeId="node-1854">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1855"></child>
+        </children>
+    </item>
+    <item nodeId="node-1855">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Lions cage
+The cage for the king of the jungle. You see a scuba tank inside the enclosure.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1856"></child>
+        </children>
+    </item>
+    <item nodeId="node-1856">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Safari Zone
+A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1857"></child>
+        </children>
+    </item>
+    <item nodeId="node-1857">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Ape Cage
+a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1858"></child>
+        </children>
+    </item>
+    <item nodeId="node-1858">
+        <command xml:space="preserve">x alpha monkey</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine the Alpha.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1859"></child>
+        </children>
+    </item>
+    <item nodeId="node-1859">
+        <command xml:space="preserve">x alpha</command>
+        <result xml:space="preserve"> a huge monkey that can be mistaken for a gorilla. He has teeth the size of tigers, as much muscle as a horse and claws the size of a pointer finger . Only a king can rival him...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1860"></child>
+        </children>
+    </item>
+    <item nodeId="node-1860">
+        <command xml:space="preserve">take keys</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1861"></child>
+        </children>
+    </item>
+    <item nodeId="node-1861">
+        <command xml:space="preserve">take house keys</command>
+        <result xml:space="preserve">I only understood you as far as wanting to take the house key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1862"></child>
+        </children>
+    </item>
+    <item nodeId="node-1862">
+        <command xml:space="preserve">take house key</command>
+        <result xml:space="preserve">Alpha monkey bares his teeth and tries to rip your head off. Maybe trying to take them now is not such a good idea...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
