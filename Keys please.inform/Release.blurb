@@ -22,8 +22,8 @@ placeholder [IFID] = "B931D718-66B9-494F-BB3E-2BE035992A64"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2017"
 placeholder [TITLE] = "Keys please"
-placeholder [AUTHOR] = "Christian Yuh"
-placeholder [BLURB] = "A work of interactive fiction."
+placeholder [AUTHOR] = "Christian Yuh The release number is 1"
+placeholder [BLURB] = "Can you get your keys back from the monkeys?"
 
 ! Other material to release
 
