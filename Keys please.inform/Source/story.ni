@@ -20,6 +20,8 @@ To say exit list:
 When play begins: say "Phew, work is finally over. Being a zookeeper is exausting! As you exit the zoo and approach your car, you realized that something doesn't feel right...your keys aren't in your pockets! You run back into the zoo's main plaza and frantically start looking, when you suddenly realize that those rascal monkeys might have taken it! "
 
 
+the description of player is "a beautiful man with nice golden hair" 
+
 Main Plaza is a room. "A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east and the safari zone is to the south."
 
 Safari Zone is a room. Safari Zone is south of Main Plaza. "A giant opening. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west."
