@@ -15,19 +15,20 @@ To say exit list:
 		let place be the room way from the location; 
 		if place is a room, say " [way]".
 [Credit: Mr. Kiang: Get that Cat]
+[puts exit list on top of screen]
 
 When play begins: say "Phew, work is finally over. Being a zookeeper is exausting! As you exit the zoo and approach your car, you realized that something doesn't feel right...your keys aren't in your pockets! You run back into the zoo's main plaza and frantically start looking, when you suddenly realize that those rascal monkeys might have taken it! "
 
 
 Main Plaza is a room. "A beautiful open plaza. The bathroom is to the west and the aquatic center is to the east and the safari zone is to the south."
 
-Safari Zone is a room. Safari Zone is south of Main Plaza. "A opening with many different animal cages around it. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west."
+Safari Zone is a room. Safari Zone is south of Main Plaza. "A giant opening. There is a sign in the middle of the opening. The main plaza is to the north and the ape cage is to the south and the lion cage is to the west."
 
 Shark tooth is thing. It is in the aquatic center. It unlocks the treasure chest. It is undescribed. The description is "a sharp object that is brownish white. Sharks need to brush their teeth more!"
 
 Understand "sharktooth", and "tooth" as shark tooth.
 
-The sign is scenery in the safari zone. The description is "Zone for the most land epic animals of the world. Aquatic zone cannot hang." 
+The sign is scenery in the safari zone. The description is "Zone for the most land epic animals of the world." 
 
 Bathroom is a room. Bathroom is west of Main Plaza. "A quaint little room where people can handle their business. There is a mirror on the wall as well as a cubboard. A trashcan is in the corner. The Main Plaza is to the east"
 
@@ -35,11 +36,13 @@ Aquatic Center is a room. Aquatic Center is east of Main Plaza. "A center with m
 
 The table is scenery in the Aquatic center. The description is "[if player is carrying the shark tooth] a brown table. [otherwise] a brown table. You see a sharktooth sticking out of the wood."
 
-The aquatic sign is scenery in the aquatic center. The description is "Zone for the most epic water animals of the world. Safari zone cannot hang."
+The aquatic sign is scenery in the aquatic center. The description is "Zone for the most epic water animals of the world."
 
 The mirror is scenery in the bathroom. The description is "an ugly man melts out of the mirror causing you to panic...when suddenly you realize it is you."
 
 Dolphin enclosure is a room. Dolphin enclosure is east of Aquatic Center."You are on the balcony of the dolphin enclosure. the water looks very nice and calm. The aquatic center is to the west and the pool is below"
+
+Water is scenery in the dolphin enclosure. The description is "calm, cool water"
 
 Instead of going to the pool:
 	if player is wearing scuba tank:
@@ -48,20 +51,24 @@ Instead of going to the pool:
 	Otherwise: 
 		say "you can't enter without air!";
 		[Credit: Mr. Kiang and Aikin's Inform 7 Handbook]
+		[player needs tank to go into pool]
 	
 Pool is a room. Pool is below dolphin enclosure. the description is "the water feels very warm up here, you see some fish down below. The bottom of the pool is below and the dolphin enclosure is up."
 
 Bottom of Pool is a room. Bottom of Pool is below Pool. The description is " 'blub blub' the water is very chilly down here 'blub blub' you can see a 'blub blub' a treasure chest."
 
-Ape Cage is a room. Ape Cage is south of Safari Zone. The description is "a cage for the most annoying animals on the planet. You see a little monkey smiling at you, and the Alpha monkey dangling your much needed car keys!"
+Ape Cage is a room. Ape Cage is south of Safari Zone. The description is "a cage for the most annoying animals on the planet. You see 2 monkeys. A little monkey smiling at you and the Alpha monkey dangling your much needed car keys!"
 
-Lions cage is a room. Lions cage is west of Safari Zone. "[if player is carrying the scuba tank]The cage for the king of the jungle. Pride rock is to the west of the enclosure. [otherwise] The cage for the king of the jungle. You see a scuba tank on pride rock, which is the west part of the enclosure."
+The scuba tank is a thing. It is inside Pride Rock. The scuba tank is wearable. The description of the scuba tank is "a tank full of air that will help propel you into the deep."
 
-Pride Rock is a room. Pride Rock is west of Lions cage. "[if player is carrying the scuba tank] The rock where the lions hang out. A big lion is eyeing you 30 ft away. [otherwise] The rock where the lions hang out. A big lion is eyeing you 30 ft away. You see a scuba tank right by your feet." 
+Understand "put [something]" as wearing.
 
-The scuba tank is a thing inside Pride Rock. The scuba tank is wearable. The scuba tank is undescribed. The description of the scuba tank is "a tank full of air that will help propel you into the deep."
+Lions cage is a room. Lions cage is west of Safari Zone. The description is "The cage for the king of the jungle. Pride rock is to the west of the enclosure."
 
-The collar is a thing. The collar is in the cubboard. The description of the collar is "a big black collar with spikes on the outside. its so big you can fit it around barney the dinosaur!"
+Pride Rock is a room. Pride Rock is west of Lions cage. "The rock where the lions hang out. A big lion is eyeing you 30 ft away."
+
+
+The collar is a thing. The collar is in the cubboard. The description of the collar is "a big black collar with spikes on the outside."
 
 The cubboard is a container in the bathroom. It is a closed openable container. The cubboard is undescribed. The description is "a wooden cubboard, there may be something inside"
 
@@ -78,7 +85,7 @@ The monkey is a male animal. The monkey is in the Ape Cage. The monkey is undesc
 
 understand "little monkey" as monkey.
 
-The trashcan is a container in the bathroom. It is a closed openable container. The trashcan is undescribed. The description is "a nasty trashcan"
+The trashcan is a container in the bathroom. It is a closed openable container. The trashcan is undescribed. The description is "a nasty trashcan. Some weird smell is comming from inside."
 
 Instead of taking trashcan:
 	Say "its too heavy you silly goose."
@@ -117,6 +124,7 @@ say "You combine the rope and collar to make a leash.";
 remove rope from play;
 remove collar from play;
 move the leash to player.
+[My house minigame (Mrs. Kiang help)]
 
 [I want player to use the lion to scare the king monkey away. In puzzle 1, the player made the leash and in puzzle 2, the player obtained the piece of meat. In the beginning, the lion is going to be to aggressive to tame, but one you feel him the piece of meat, he will be tame enough for you to put the leash on. After the lion has the leash on, it will follow you in every room and when you bring him to the monkey room, you can get the keys and win the game.]
 
@@ -161,8 +169,15 @@ Instead of taking house key:
 		say "The alpha monkey trips out and runs away like a little baby";
 		move house key to player;
 	Otherwise:
-		say "Alpha monkey bares his teeth and tries to rip your head off. Maybe trying to take them now is not such a good idea..."
+		say "Alpha monkey bares his teeth and tries to rip your head off. If only you had a huge animal to scare him"
+		
 
+Instead of attacking monkey:
+	if lion is in the Ape Cage:
+		say "The monkeys run away the site of the giant lion and drops the keys. You pick it up and can finally go home!";
+		move house key to player;
+	Otherwise:
+		say "Alpha monkey bares his teeth and tries to rip your head off. If only you had a huge animal to scare him."
 
 An every turn rule:
 	if the player is carrying the house key:
